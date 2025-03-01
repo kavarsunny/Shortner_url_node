@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <h1>Signup</h1>
+    <form action="/user/signup" method="post">
+      <label>Name:</label>
+      <input type="text" required name="name" placeholder="Enter your name" />
+      
+      <label>Email:</label>
+      <input type="email" required name="email" placeholder="Enter your email" />
+      
+      <label>Password:</label>
+      <input type="password" required name="password" placeholder="Enter your password" />
+      
+      <button type="submit">Signup</button>
+    </form>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <h1>Signup</h1>
+    <% if (typeof error !== 'undefined') { %>
+      <p style="color:red;"><%= error %></p>
+    <% } %>
+    <form action="/user/signup" method="post">
+      <label>Name:</label>
+      <input type="text" required name="name" placeholder="Enter your name" />
+      <br />
+      <label>Email:</label>
+      <input type="email" required name="email" placeholder="Enter your email" />
+      <br />
+      <label>Password:</label>
+      <input type="password" required name="password" placeholder="Enter your password" />
+      <br />
+      <button type="submit">Signup</button>
+    </form>
+    <p>Already have an account? <a href="/user/login">Login here</a></p>
+  </body>
+</html>
